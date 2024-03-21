@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const UserModel = require("./models/Model")
+const bcrypt = require("bcrypt")
 require("dotenv").config();
 
 const app = express();
@@ -22,31 +23,35 @@ db.once("open",()=> console.log("connected to MongoDB.."))
 
 
 app.post('/api/v1/register',(req,res) =>{
-    UserModel.create(req.body)
-    .then(reg => res.status(201).json(reg))
-    .catch(err => res.status(500).json({
-        error: err.message
-    }))
+    const { fname, lname, email, password } = req.body;
+    bcrypt.hash(password, 10)
+    .then(hash => {
+        UserModel.create({fname, lname, email, password:hash})
+        .then(users => res.json(users))
+        .catch(err => res.json(err))
+    })
+    .catch(err => console.log(err.message))
 })
 
 
 app.post('/api/v1/login',(req,res) =>{
-    const {email, password} = req.body;
+    const { email, password } = req.body;
     UserModel.findOne({email: email})
     .then(user => {
         if(user){
-            if(user.password === password){
-                res.json("success")
-            }else{
-                res.json("Password incorrect")
-            }
-        }else{
-            res.json("No account existed.")
+            bcrypt.compare(password, user.password, (err,response) => {
+                if(response){
+                    res.json("success")
+                }
+                else{
+                    res.json("The Password Incorrect")
+                }
+            })
+        }
+        else{
+            res.json("No Record Existed")
         }
     })
-    .catch(err => {
-        res.json("login error")
-    });
 })
 
 
