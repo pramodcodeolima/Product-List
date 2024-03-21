@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+    
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 50%;
+    border-radius: 30px;
+    background-color: #7518F2;
+    margin-top: 5px;
+    padding-top: 13px;
+    text-decoration: none;
+    color: white;
+}
+
+.custom-form{
+    width: 680px;
+}
+
+.customnav{
+    display: flex; 
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    height: 100px;
+    margin: 0;
+}
+
+.icon img{
+    height: 100%;
+}
+
+.custom-icon{
+    font-size: 24px;
+}
+
+.space{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    
+}
+
+.navbar-nav .nav-link ul li{
+    padding-left:30px;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 50%;
+    background-color: #949494;
+    bottom: -4px;
+}
+
+
+.navbar-nav .nav-link.inactive::after {
+    width: 15%;
+    background-color: #949494;
+    bottom: -4px;
+}
+

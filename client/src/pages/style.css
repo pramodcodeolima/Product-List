@@ -1,0 +1,174 @@
+.container {
+    height: 100vh;
+    zoom:90%;
+}
+
+
+body {
+    zoom: 90%;
+}
+  
+.row {
+    height: 100%;
+}
+
+.column {
+    align-self: center;
+}
+
+.heading {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.form-control {
+    background-color: rgba(240, 240, 240, 0.6);
+}
+  
+.forgot-pw {
+    text-align: end;
+}
+  
+.buttons {
+    margin-top: 20px;
+}
+  
+.sign {
+    margin-top: 20px;
+}
+  
+.right {
+    margin-top: 50px;
+    font-size: 12px; 
+}
+  
+.custom-font-size {
+    font-size: 11px;
+}
+
+.banner1 {
+    height: 100%;
+}
+  
+.banner1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.or{
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.custom-icon {
+    font-size: 24px;
+    padding: 0;
+}
+
+.banner{
+    margin-top: 20px;
+    height: 500px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sub-item-container{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 450px;
+}
+
+.items-custom1{
+    
+    border-radius: 20px;
+    height: 255px;
+    width: 280px;
+    background-color: rgb(238, 226, 226);
+}
+
+.items-custom2{
+    height: 381px;
+    border-radius: 20px;
+    width: 280px;
+    background-color: rgb(238, 226, 226);
+}
+
+.items-custom3{
+    height: 328px;
+    border-radius: 20px;
+    width: 280px;
+    background-color: rgb(238, 226, 226);
+}
+
+.items-custom4{
+    height: 234px;
+    border-radius: 20px;
+    width: 280px;
+    background-color: rgb(238, 226, 226);
+}
+.sub-item-container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.see{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+.more{
+    padding-top: 10px;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .col.text-start {
+      text-align: start;
+}
+
+.heading {
+    width: 400px;
+}
+    
+.col.imagediv.text-center {
+      text-align: center;
+}
+}
+  
